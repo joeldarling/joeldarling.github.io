@@ -1,0 +1,85 @@
+<!-- Joel Darling Fullstack Foundations - Guessing Game project -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game - Joel Darling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="css/my-styles.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script src='js/jquery-2.1.4.min.js'></script>
+    <script src='js/jquery-ui.min.js'></script>
+    <script src='js/guessingGame.js'></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <!-- test -->
+      <!-- Page Title-->
+      <h1 class="jumbo-text text-center">GUESSING GAME</h1>
+
+      <!--Main Display and Guess Enter -->
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+          <!-- Game status displays-->
+          <h3 id="status"></h3>
+          <h4 id="guess-advice"></h4>
+          <br/>
+          <h4 id="guess-count">5 Guesses Remaining</h4>
+          <br/>
+
+          <!-- Guess Input and Submit button-->
+          <input type="number" class="form-control input-lg" id="guessInput" placeholder="Enter a number 1-100">
+          <br/>
+
+          <button class="btn big-button" type="submit" onclick="playersGuessSubmission();">submit</button>
+          <!-- Game Control buttons -->
+          <br/><br/>
+          <div class="row">
+
+            <!-- Hint Button -->
+            <div class="col-sm-6">
+              <button  class="small-button" onclick="provideHint()">
+              <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+              Hint</button>
+            </div>
+            <!-- Game Reset Button -->
+
+            <div class="col-sm-6">
+              <button class="small-button" onclick="playAgain()">
+              <span class="glyphicon glyphicon-repeat" aria-hidden="true""></span>
+                Start Over</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Previous Guess display board-->
+        <div class="col-sm-4 text-center">
+          <h4 id="guess-list"> Guesses so far:</h4>
+          <p></p>
+        </div>
+
+      </div>
+
+
+
+
+    </div> <!-- End main container-->
+
+    <!-- Footer -->
+    <!-- <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-center">Created by <a href="http://joeldarling.com">Joel Darling</a></p>
+      </div>
+    </footer> -->
+
+  </body>
+</html>
